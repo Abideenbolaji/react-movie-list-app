@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  color: #252525;
+  font-weight: 400;
+  background-color: #f7f2e9;
+  /* border-bottom: 1.6rem solid #edc84b; */
+  min-height: 100vh;
+  max-width: 90%;
+  padding: 3.2rem;
+  /* padding-bottom: 6rem; */
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+  font-size: 1.5rem;
+}
+.header {
+  margin-bottom: 2rem;
+}
+.header h1 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  text-align: center;
+  align-items: center;
+}
+.btn {
+  align-self: flex-start;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #00ffb3;
+  color: #ffffff;
+  border: none;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #00ffa6f3;
+}
+
+.movieBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+.movieBox ul {
+  list-style-type: none;
+}
+.movie-list {
+  display: flex;
+  gap: 3rem;
+}
+.movie-list img {
+  width: 12rem;
+  align-self: self-start;
+  height: 8rem;
+}
+.movie-list div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

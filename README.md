@@ -1,6 +1,6 @@
 #Project Title
 A movie list UI built with React and CSS
-#Features
+##Features
 Search bar
 Add your movie
 #Technologies

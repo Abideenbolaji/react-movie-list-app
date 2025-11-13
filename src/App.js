@@ -35,19 +35,38 @@ const movieData = [
 
 export default function App() {
   return (
-    <div className="container">
-      <Header />
-      <MovieBox />
+    <div className="Box">
+      <NavBar />
+
+      <div className="container">
+        <MovieBox />
+      </div>
     </div>
   );
 }
-
-function Header() {
+function NavBar() {
   return (
-    <div className="header">
-      <h1>old movie store</h1>
+    <div className="navBar">
+      <Logo />
+      <Search />
+      <AddMovie />
     </div>
   );
+}
+function Logo() {
+  return (
+    <h1 className="logo">
+      <span>🎥</span>cinema
+    </h1>
+  );
+}
+function Search() {
+  return (
+    <input type="search" placeholder="Search for movie" className="search" />
+  );
+}
+function AddMovie() {
+  return <p className="addMovie">➕</p>;
 }
 
 function MovieBox() {

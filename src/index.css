@@ -11,16 +11,18 @@ body {
   color: #252525;
   font-weight: 400;
   background-color: #f7f2e9;
-  /* border-bottom: 1.6rem solid #edc84b; */
-  min-height: 100vh;
-  max-width: 90%;
-  padding: 3.2rem;
-  /* padding-bottom: 6rem; */
-}
 
+  /* padding: 0; */
+}
+.Box {
+  width: 100%;
+  /* margin: auto 7rem; */
+  /* padding: auto 7rem; */
+}
 .container {
   max-width: 80rem;
   margin: 0 auto;
+  margin-top: 4rem;
 
   display: flex;
   flex-direction: column;
@@ -28,8 +30,56 @@ body {
   gap: 4.8rem;
   font-size: 1.5rem;
 }
+.navBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 30rem;
+  /* justify-content: space-between; */
+
+  /* gap: 10rem; */
+
+  background-color: #00ffb3;
+  height: 4rem;
+  padding: 0 3.3rem;
+  border-radius: 0.8rem;
+  /* width: 100%; */
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  font-size: 3rem;
+  gap: 1rem;
+
+  color: #f7f2e9;
+}
+.logo span {
+  font-size: 2.5rem;
+}
+.search {
+  justify-self: center;
+  width: 30rem;
+  padding: 0.8rem 0.5rem;
+  border-radius: 0.8rem;
+  border: 0;
+  outline: 0;
+  font-size: 1.2rem;
+}
+.search::placeholder {
+  color: #252525;
+}
+.search:focus {
+  padding: 0.8rem 0.5rem;
+  color: #252525;
+  background-color: #f7f2e9;
+}
+.addMovie {
+  /* padding: 0 10rem; */
+  font-size: 2rem;
+  cursor: pointer;
+}
 .header {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 .header h1 {
   text-transform: uppercase;

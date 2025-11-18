@@ -16,6 +16,7 @@ body {
 }
 .Box {
   width: 100%;
+  padding-bottom: 5rem;
   /* margin: auto 7rem; */
   /* padding: auto 7rem; */
 }
@@ -35,9 +36,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   gap: 30rem;
-  /* justify-content: space-between; */
-
-  /* gap: 10rem; */
 
   background-color: #00ffb3;
   height: 4rem;
@@ -73,20 +71,24 @@ body {
   color: #252525;
   background-color: #f7f2e9;
 }
-.addMovie {
+.bars {
   /* padding: 0 10rem; */
-  font-size: 2rem;
+  font-size: 1.2rem;
+
   cursor: pointer;
+  width: 7rem;
+  height: 3rem;
+  border: none;
 }
-.header {
-  margin: 2rem 0;
+.bars img {
+  width: 7rem;
+  height: 3rem;
+  background: transparent;
+  background-image: none;
+
+  border-radius: 0.9rem;
 }
-.header h1 {
-  text-transform: uppercase;
-  font-size: 3.5rem;
-  text-align: center;
-  align-items: center;
-}
+
 .btn {
   align-self: flex-start;
   padding: 0.8rem 1.5rem;
@@ -111,6 +113,10 @@ body {
 .movie-list {
   display: flex;
   gap: 3rem;
+}
+.movieBox h2 {
+  text-wrap: wrap;
+  font-size: 2rem;
 }
 .movie-list img {
   width: 12rem;

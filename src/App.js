@@ -8,12 +8,12 @@ const movieData = [
     isAvailable: true,
   },
   {
-    title: "The Dark Knight",
-    genre: "Action, Crime, Drama",
-    year: 2008,
-    rating: 9.0,
-    poster: "movies/Dark-knight.jpeg",
-    isAvailable: true,
+    title: "The Batman: Part II",
+    genre: "Action, Crime, Superhero",
+    year: 2025,
+    rating: null,
+    poster: "movies/batman-part2.jpeg",
+    isAvailable: false,
   },
   {
     title: "Interstellar",
@@ -21,7 +21,7 @@ const movieData = [
     year: 2014,
     rating: 8.6,
     poster: "movies/interstellar.jpeg",
-    isAvailable: false,
+    isAvailable: true,
   },
   {
     title: "The Matrix",
@@ -30,6 +30,39 @@ const movieData = [
     rating: 8.7,
     poster: "movies/matrix.jpeg",
     isAvailable: true,
+  },
+  {
+    title: "Gladiator",
+    genre: "Action, Drama, Adventure",
+    year: 2000,
+    rating: 8.5,
+    poster: "movies/gladiator.jpeg",
+    isAvailable: true,
+  },
+  {
+    title: "Frankenstein",
+    genre: "Horror, Drama",
+    year: 2025,
+    rating: null,
+    poster: "movies/frankenstein.jpeg",
+    isAvailable: false,
+  },
+  {
+    title: "Avengers: Endgame",
+    genre: "Action, Sci-Fi, Adventure",
+    year: 2019,
+    rating: 8.4,
+    poster: "movies/endgame.jpeg",
+    isAvailable: true,
+  },
+
+  {
+    title: "Zootopia 2",
+    genre: "Animation, Adventure, Comedy",
+    year: 2025,
+    rating: null,
+    poster: "movies/zootopia.jpeg",
+    isAvailable: false,
   },
 ];
 
@@ -41,6 +74,7 @@ export default function App() {
       <div className="container">
         <MovieBox />
       </div>
+      <Footer />
     </div>
   );
 }
@@ -49,7 +83,7 @@ function NavBar() {
     <div className="navBar">
       <Logo />
       <Search />
-      <AddMovie />
+      <GoMenu />
     </div>
   );
 }
@@ -65,8 +99,12 @@ function Search() {
     <input type="search" placeholder="Search for movie" className="search" />
   );
 }
-function AddMovie() {
-  return <p className="addMovie">➕</p>;
+function GoMenu() {
+  return (
+    <span className="bars">
+      <img src="movies/bars.png" alt="bars"></img>
+    </span>
+  );
 }
 
 function MovieBox() {
@@ -80,6 +118,9 @@ function MovieBox() {
     </div>
   );
 }
+// function starRating(){
+//   return()
+// }
 
 function MovieBoxChild({ movie }) {
   const isAvailable = movie.isAvailable;
@@ -94,12 +135,19 @@ function MovieBoxChild({ movie }) {
         {isAvailable ? (
           <>
             <span>Available</span>
-            <button className="btn">Watch now</button>
+            <button className="btn">View Details</button>
           </>
         ) : (
-          <span> Coming soon</span>
+          <>
+            <span> Coming soon</span>
+            <button className="btn">View Details</button>
+          </>
         )}
       </div>
     </li>
   );
+}
+
+function Footer() {
+  return <p>Still Coming</p>;
 }
